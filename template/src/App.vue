@@ -22,11 +22,12 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-@import 'common/stylus/mixin'
+@import 'common/stylus/index'
 #app
   width 100vw
   height 100vh
   text-align: center
   .logo
+    width 200px
     margin-top: 200px
 </style>
