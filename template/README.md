@@ -1,6 +1,6 @@
-# {{ name }}
+# {{ 一个Vue框架的模板 }}
 
-> {{ description }}
+> {{ 不用每次开发前都使用脚手架去搭建框架 }}
 
 ## Build Setup
 
