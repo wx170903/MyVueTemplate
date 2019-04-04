@@ -1,8 +1,21 @@
 'use strict'
 // Template version: {{ template_version }}
 // see http://vuejs-templates.github.io/webpack for documentation.
-
 const path = require('path')
+const os = require('os');
+const host = showObj(os.networkInterfaces());
+
+function showObj(obj) {
+  for (var devName in obj) {
+    var iface = obj[devName];
+    for (var i = 0; i < iface.length; i++) {
+      var alias = iface[i];
+      if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
+        return alias.address;
+      }
+    }
+  }
+}
 
 module.exports = {
   dev: {
@@ -13,7 +26,7 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST
+    host: host, // can be overwritten by process.env.HOST
     port: 8080, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: false,
     errorOverlay: true,

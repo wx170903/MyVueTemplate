@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img src="./assets/mm.jpg">
+    <img class="logo" src="./assets/mm.jpg">
     {{#router}}
     <router-view/>
     {{else}}
@@ -22,7 +22,7 @@ export default {
 }
 </script>
 <style lang="stylus" scoped>
-@import 'common/stylus/index'
+@import 'common/stylus/variable'
 #app
   width 100vw
   height 100vh
