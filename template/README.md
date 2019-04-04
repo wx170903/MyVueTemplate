@@ -1,36 +1,21 @@
-# {{ 一个Vue框架的模板 }}
+# 一个Vue框架的模板
 
-> {{ 不用每次开发前都使用脚手架去搭建框架 }}
+> 不用每次开发前都使用脚手架去搭建框架
 
-## Build Setup
+## 指令
 
 ``` bash
-# install dependencies
-npm install
+# 初始化
+vue init webapck MyVue
 
-# serve with hot reload at localhost:8080
-npm run dev
+#在初始化过程中增添了
+better-scroll (列表滑动模块)
+axios (数据交互) 
+stylus (预编译)
+lib-flexible + postcss-pxtorem (自动化转化rem)
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
-{{#unit}}
-
-# run unit tests
-npm run unit
-{{/unit}}
-{{#e2e}}
-
-# run e2e tests
-npm run e2e
-{{/e2e}}
-{{#if_or unit e2e}}
-
-# run all tests
-npm test
-{{/if_or}}
+# 在起server的时候引入了os模块设定获取本地ip地址+8080端口 
+用于移动端本地ip地址获取
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
